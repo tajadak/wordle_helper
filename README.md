@@ -1,1 +1,1 @@
-# wordle_helper
+# This is a Wordle Helper which allows users to refine their guesses
