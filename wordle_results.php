@@ -13,10 +13,16 @@ $formdata = array(
     'd'=> $_POST['d'],
     'e'=> $_POST['e']
 );
+if ($_POST['shortlist'] == 'Yes') {
+    $wordlist = 'wordle-answers.txt';
+} else {
+    $wordlist = 'wordle-allowed-guesses.txt';
+}
+// echo $wordlist;
 $jsondata = json_encode($formdata, JSON_PRETTY_PRINT);
 
 file_put_contents("assets/conditions.json", $jsondata);
-$command = escapeshellcmd('./wordle.py');
+$command = escapeshellcmd('./wordle.py ' . $wordlist);
 
 $output = shell_exec($command);
 echo '<span style="font-size:2.00em;color:blue;">'.$output.'</span>';

@@ -28,7 +28,11 @@ width: 200px;
  Included Letters Not in Pos 3: <input type="text" name="c" id="c" /><br />
  Included Letters Not in Pos 4: <input type="text" name="d" id="d" /><br />
  Included Letters Not in Pos 5: <input type="text" name="e" id="e" /><br />
- <input type="submit" id="submit" value="Get Words" />
+ <br />
+ <input type="submit" id="submit" value="Get Words" /><br />
+ <br />
+ <br />
+ Use Short List<input type="checkbox" name="shortlist" value="Yes" />
 </h1>
 </form>
 </body>

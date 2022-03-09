@@ -7,9 +7,13 @@ Narrows down word list using a json containing guess feedback information.
 Author: Tony Audi teavse@rit.edu
 '''
 import ast
+import sys
+
+# print(str(sys.argv[1]))
 
 ASSETS_PATH = '/assets'
-POSSIBLE_ANSWERS_PATH = f'.{ASSETS_PATH}/wordle-allowed-guesses.txt'
+# POSSIBLE_ANSWERS_PATH = f'.{ASSETS_PATH}/wordle-allowed-guesses.txt'
+POSSIBLE_ANSWERS_PATH = f'.{ASSETS_PATH}/'+str(sys.argv[1])
 WORDS = sorted([word.strip() for word in open(POSSIBLE_ANSWERS_PATH).readlines()]) # Possible answers
 CONDITIONS_PATH = f'.{ASSETS_PATH}/conditions.json'
 
